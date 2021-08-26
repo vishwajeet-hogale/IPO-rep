@@ -1,0 +1,26 @@
+{% extends "layout.html" %} {% block body %}
+
+<br /><br />
+
+<div class="container">
+  <div class="cards-list">
+    {% for contact in contacts %}
+
+    <div
+      class="card"
+      id="{{contact.1}}"
+      onclick="window.location.href = '/page/{{contact.1}}';"
+    >
+      <br />
+      <div class="container">
+        <h4><b>{{contact.2}}</b></h4>
+        <p>{{contact.7}}</p>
+      </div>
+    </div>
+
+    <br />
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
